@@ -1,18 +1,20 @@
 # 🎓 StudentManagementSwingApp
 
 ## 🧩 Overview
-This project is a **Java Swing-based GUI application** developed as part of a university assignment.  
-It allows users to manage student records through an interactive window interface, supporting the addition, viewing, and deletion of student information.  
-The system demonstrates understanding of **event-driven programming**, **object-oriented design**, and **GUI development with Swing components**.
+This project is a **Java Swing-based graphical application** that manages students, their course enrollments, and assigned grades.  
+It provides a complete **GUI interface** for adding and updating students, enrolling them in courses, assigning grades, and displaying GPA dynamically.  
+Developed for a **University of the People** programming assignment, the system demonstrates practical mastery of **event-driven programming**, **Swing components**, and **object-oriented design**.
 
 ---
 
 ## ⚙️ Features
-- Add new student records  
-- Display all registered students in a table view  
-- Delete selected student entries  
-- Clear all fields instantly  
-- Simple and intuitive graphical interface built with Java Swing  
+- **Add / Update Students** via dialog form with input validation (name & email format)  
+- **Enroll / Drop Courses** with duplicate enrollment checks  
+- **Assign Grades** directly through a JTable with combo-box editing  
+- **Automatic GPA Calculation** after every grade update  
+- **Persistent UI updates** (repaints and refreshes dynamically)  
+- Built-in **menu bar** with File/Help options  
+- **Preloaded demo students and courses** for easy testing  
 
 ---
 
@@ -20,18 +22,22 @@ The system demonstrates understanding of **event-driven programming**, **object-
 
 | Concept | Description |
 |----------|-------------|
-| **Object-Oriented Programming (OOP)** | Encapsulates student data and GUI logic within classes |
-| **Swing GUI Components** | Implements JFrame, JButton, JLabel, JTextField, JTable, and JScrollPane |
-| **Event Handling** | Uses ActionListener and event-driven programming for user interaction |
-| **Collections** | Stores student data dynamically for quick addition and deletion |
-| **Input Validation** | Ensures correct and complete data entry before processing |
+| **Java Swing GUI** | Built with JFrame, JPanel, JTable, JList, JComboBox, and dialog components |
+| **MVC Pattern** | `EnrollmentTableModel` acts as the Model; GUI serves as the View & Controller |
+| **Object-Oriented Design** | Classes like `Student`, `Course`, and `Enrollment` encapsulate logic and relationships |
+| **Event-Driven Programming** | Button clicks, table edits, and list selections trigger real-time updates |
+| **Inner Classes & Enums** | `Grade` enum defines grade categories; nested classes used for modularity |
+| **Data Validation** | Regex-based email validation and user-friendly feedback dialogs |
+| **Collections (ArrayList, DefaultListModel)** | Used for dynamic storage and updates of student and course data |
+| **Polymorphism & Encapsulation** | Student GPA computed polymorphically through encapsulated grade logic |
+| **Custom TableModel** | `EnrollmentTableModel` extends `AbstractTableModel` to support editable grade cells |
 
 ---
 
 ## ▶️ How to Run
 
-1️⃣ Open a terminal or VS Code terminal in the project directory.  
-2️⃣ Compile the program:  
+1️⃣ Open the project in VS Code or your preferred IDE.  
+2️⃣ Compile and run:
 ```bash
 javac StudentManagementSwingApp.java
 ```
@@ -40,6 +46,12 @@ javac StudentManagementSwingApp.java
 java StudentManagementSwingApp
 ```
 ## 🏫 Educational Context
+This application was developed for a Computer Science course at the University of the People.
+It demonstrates:
 
-This project was created as part of a Computer Science course at the University of the People to apply Java Swing GUI programming and event-driven logic.
-It demonstrates the ability to combine graphical interfaces with logical operations, providing a foundational example of desktop application development in Java.
+Event-driven logic using Swing listeners
+
+Real-time updates through custom TableModels
+
+Practical application of OOP design and GUI programming
+It serves as a foundational project for learning desktop application development in Java.
